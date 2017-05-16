@@ -53,6 +53,8 @@
     "npm-check-updates": "^2.11.0",
     "opn": "^5.0.0",
     "ora": "^1.2.0",
+    "pug": "^2.0.0-rc.1",
+    "pug-loader": "^2.3.0",
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.4",
     "script-loader": "^0.7.0",

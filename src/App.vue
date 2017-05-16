@@ -1,38 +1,28 @@
-<template>
-  <div id="app">
-    <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
-      <ul class="sidebar-menu" data-close="offCanvas">
-        <li><router-link to="/" exact>Home</router-link></li>
-        <li><router-link to="/reveal" exact>Reveal</router-link></li>
-        <li><router-link to="/slider" exact>Slider</router-link></li>
-        <li><router-link to="/tooltip" exact>Tooltip</router-link></li>
-        <li><router-link to="/dropdown-menu" exact>Dropdown Menu</router-link></li>
-        <li><router-link to="/drilldown-menu" exact>Drilldown Menu</router-link></li>
-        <li><router-link to="/accordion-menu" exact>Accordion Menu</router-link></li>
-        <li><router-link to="/magellan" exact>Magellan</router-link></li>
-        <li><router-link to="/accordion" exact>Accordion</router-link></li>
-        <li><router-link to="/dropdown" exact>Dropdown</router-link></li>
-        <li><router-link to="/tabs" exact>Tabs</router-link></li>
-        <li><router-link to="/orbit" exact>Orbit</router-link></li>
-      </ul>          
-    </div>
-    <div class="off-canvas-content" data-off-canvas-content>
-      <div class="top-bar">
-        
-          <ul class="menu expanded">
-            <li class="logo">
-              <router-link to="/">Vue-Foundation</router-link>
-            </li>
-            <li><a class="button small menu-button" data-toggle="offCanvas">Menu</a></li>
-          </ul>
-        
-      </div>
-      <div class="content-wrapper">
-        <router-view></router-view>
-      </div>
-    
-    </div>
-  </div>
+<template lang="pug">
+  div#app
+    div#offCanvas.off-canvas.position-right(data-off-canvas)
+      ul.sidebar-menu(data-close="offCanvas")
+        li: router-link(to="/" exact) Home
+        li: router-link(to="/reveal" exact) Reveal
+        li: router-link(to="/slider" exact) Slider
+        li: router-link(to="/tooltip" exact) Tooltip
+        li: router-link(to="/dropdown-menu" exact) Dropdown Menu
+        li: router-link(to="/drilldown-menu" exact) Drilldown Menu
+        li: router-link(to="/accordion-menu" exact) Accordion Menu
+        li: router-link(to="/magellan" exact) Magellan
+        li: router-link(to="/accordion" exact) Accordion
+        li: router-link(to="/dropdown" exact) Dropdown
+        li: router-link(to="/tabs" exact) Tabs
+        li: router-link(to="/orbit" exact) Orbit
+
+    div.off-canvas-content(data-off-canvas-content)
+      div.top-bar
+        ul.menu.expanded
+          li.logo: router-link(to="/") Vue-Foundation
+          li: a.button.small.menu-button(data-toggle="offCanvas") Menu
+
+      div.content-wrapper
+        router-view
 </template>
 
 <script>
@@ -86,3 +76,4 @@ export default {
     }
   }
 </style>
+
